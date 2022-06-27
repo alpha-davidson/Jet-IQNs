@@ -1,4 +1,4 @@
-# Implicit quantile netwroks for jet emulation
+# Implicit quantile networks for jet emulation
 
 This repository contains code to train implicit quantile networks to model joint distributions
  - autoregressively, using TensorFlow, and
