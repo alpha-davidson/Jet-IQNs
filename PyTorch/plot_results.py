@@ -11,11 +11,34 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 
+import argparse
+
+
+
 font = {'family' : 'serif',
         'size'   : 10}
 matplotlib.rc('font', **font)
 matplotlib.rcParams.update({
     "text.usetex": True})
+
+
+
+
+parser=argparse.ArgumentParser(description='train for different targets')
+parser.add_argument('--T', type=str, help='the target that you want. Options: [RecoDatapT, RecoDataeta, RecoDataphi, RecoDatam]', required=True)
+args = parser.parse_args()
+#target string
+T = args.T
+
+
+
+
+
+
+
+
+
+
 
 # ###############Original plotting (works but not like Braden's)
 
@@ -55,6 +78,8 @@ matplotlib.rcParams.update({
 ############Start here for Braden-like plots
 
 #data = pd.read_csv('Data.csv')
+# pred_data_path=
+
 data = pd.read_csv('data/train_data_10M.csv')
 data = data[['RecoDatapT','RecoDataeta','RecoDataphi','RecoDatam']]
 data.columns = ['realpT','realeta','realphi','realm']
@@ -62,7 +87,8 @@ data.columns = ['realpT','realeta','realphi','realm']
 print(data.shape)
 print()
 # predicted_data_path='predicted_data/consecutive/'
-predicted_data_path='predicted_data/'
+predicted_data_path=pred_data_path
+# 'predicted_data/'
 
 print('predicted data shape' ,pd.read_csv(predicted_data_path+'RecoDatapT_predicted_consecutive.csv')['RecoDatapT_predicted'].shape)
 
@@ -190,7 +216,7 @@ def plot_one_pT():
   fig.subplots_adjust(wspace=0.0, hspace=0.1)
   plt.savefig('images/pT_IQN_10M.png')
 #   plt.savefig('images/all_pT_g2r.pdf')
-  # plt.show(); fig.show()
+  plt.show(); fig.show()
   
   plt.axis('off')
   plt.gca().set_position([0, 0, 1, 1])
@@ -284,7 +310,7 @@ def plot_one_m():
   fig.subplots_adjust(wspace=0.0, hspace=0.1)
   plt.savefig('images/m_IQN_10M.png')
 #   plt.savefig('images/all_m_g2r.pdf')
-  # plt.show(); fig.show()
+  plt.show(); fig.show()
   
   plt.axis('off')
   plt.gca().set_position([0, 0, 1, 1])
@@ -292,8 +318,17 @@ def plot_one_m():
 
 
 
-# plot_one_pT()
-plot_one_eta()
-# plot_one_phi()
-# plot_one_m()
-
+if T=='RecoDatapT':
+  plot_one_pT()
+elif T=='RecoDataeta':
+  plot_one_eta()
+elif T=='RecoDataphi':
+  plot_one_phi()
+elif T=='RecoDatam':
+  plot_one_m()
+else:
+  print('pridicting all jet variables')
+  plot_one_pT()
+  plot_one_eta()
+  plot_one_phi()
+  plot_one_m()
