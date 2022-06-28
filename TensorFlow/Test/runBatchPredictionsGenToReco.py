@@ -78,7 +78,7 @@ def main(traindataname, testdataname, networkname, h5):
     
     #Normalization 
     
-    model = QuantileNet(network_type="not normalizing") #Used to load network
+    model = QuantileNet() #Used to load network
     newModel = tf.keras.models.load_model(modelName, model.custom_objects())
     
     for y in range(0, testIn.shape[0], batchSize):
@@ -90,7 +90,7 @@ def main(traindataname, testdataname, networkname, h5):
                         currentTestIn, #Input
                         currentTestIn.shape[1], #Number of examples (batch size)
                         currentTestIn.shape[0], #4d input
-                        4, network_type="not normalizing") #4d output
+                        4) #4d output
         out = np.array(out)
         currentTestIn = np.array(currentTestIn).T
         for x in range(4):

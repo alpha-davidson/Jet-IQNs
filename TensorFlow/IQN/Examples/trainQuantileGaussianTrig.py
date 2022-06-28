@@ -33,7 +33,7 @@ def main():
     network.add(tf.keras.layers.Activation("swish"))
     network.add(tf.keras.layers.Dense(50))
     network.add(tf.keras.layers.Activation("swish"))
-    network.add(tf.keras.layers.Dense(2))
+    network.add(tf.keras.layers.Dense(1))
 
     # We want 100,000 training examples
     samples = 100000

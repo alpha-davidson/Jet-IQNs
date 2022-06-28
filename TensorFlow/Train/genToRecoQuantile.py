@@ -104,7 +104,7 @@ def main(hidden, width, alpha, initiallr, batch, cycles, epochs, patience, train
     #                                                    random_state=42)
 
     print(trainIn.shape, valIn.shape, trainOut.shape, valOut.shape)
-    model = QuantileNet(network_type="not normalizing")
+    model = QuantileNet()
 
     model.add(
         tf.keras.layers.Dense(
