@@ -1,4 +1,6 @@
 /**
+ * Adapted from https://github.com/alpha-davidson/falcon-cWGAN
+ *
  * This program clusters partons in dataset into jets, then runs jet matching
  * between the parton, generated, and reco level jets. It records the 4-vectors
  * of the matched jets
