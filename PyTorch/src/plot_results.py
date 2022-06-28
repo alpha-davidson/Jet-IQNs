@@ -214,7 +214,7 @@ def plot_one_pT():
   plt.tight_layout()
   fig.subplots_adjust(wspace=0.5, hspace=0.2)
   fig.subplots_adjust(wspace=0.0, hspace=0.1)
-  plt.savefig('images/pT_IQN_10M.png')
+  plt.savefig('src/images/pT_IQN_10M.png')
 #   plt.savefig('images/all_pT_g2r.pdf')
   plt.show(); fig.show()
   
@@ -278,7 +278,7 @@ def plot_one_phi():
   plt.tight_layout()
   fig.subplots_adjust(wspace=0.5, hspace=0.2)
   fig.subplots_adjust(wspace=0.0, hspace=0.1)
-  plt.savefig('images/10_M/phi_IQN_10M.png')
+  plt.savefig('src/images/phi_IQN_10M.png')
   plt.show(); fig.show()
 #   plt.savefig('images/all_phi_g2r_ali.pdf')
   plt.axis('off')
@@ -308,7 +308,7 @@ def plot_one_m():
   plt.tight_layout()
   fig.subplots_adjust(wspace=0.5, hspace=0.2)
   fig.subplots_adjust(wspace=0.0, hspace=0.1)
-  plt.savefig('images/m_IQN_10M.png')
+  plt.savefig('src/images/m_IQN_10M.png')
 #   plt.savefig('images/all_m_g2r.pdf')
   plt.show(); fig.show()
   

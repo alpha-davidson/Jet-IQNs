@@ -1,4 +1,4 @@
-import utils
+import src.utils as utils
 import os, sys
 
 # the standard module for tabular data
@@ -517,8 +517,8 @@ def plot_average_loss(traces, ftsize=18,save_loss_plots=save_loss_plots):
     ax.grid(True, which="both", linestyle='-')
     ax.legend(loc='upper right')
     if save_loss_plots:
-        plt.savefig('src/loss_curves/IQN_'+N+T+'_Consecutive.png')
-        print('\nloss curve saved in images/loss_curves/IQN_'+N+T+'_Consecutive.png')
+        plt.savefig('src/images/loss_curves/IQN_'+N+T+'_Consecutive.png')
+        print('\nsrc/loss_curves/IQN_'+N+T+'_Consecutive.png')
     if show_loss_plots:
         plt.show()
 
@@ -627,8 +627,8 @@ def run(model, scalers, target,
     plot_average_loss(traces)
 
     if save_model:
-        torch.save(model.state_dict(), 'trained_models/iqn_model_CONSECUTIVE10M_2_%s.dict' % target)
-        print('\ntrained model dictionary saved in trained_models/iqn_model_CONSECUTIVE10M_2_%s.dict' % target)
+        torch.save(model.state_dict(), 'src/trained_models/iqn_model_CONSECUTIVE10M_2_%s.dict' % target)
+        print('\ntrained model dictionary saved in src/trained_models/iqn_model_CONSECUTIVE10M_2_%s.dict' % target)
     return utils.ModelHandler(model, scalers) 
 
 
@@ -688,8 +688,8 @@ def plot_model(df, dnn, target, src,
     
     plt.tight_layout()
     if save_image:
-        plt.savefig('images/'+T+'IQN_Consecutive_'+N+'.png')
-        print('images/'+T+'IQN_Consecutive_'+N+'.png')
+        plt.savefig('src/images/'+T+'IQN_Consecutive_'+N+'.png')
+        print('saved image to src/images/'+T+'IQN_Consecutive_'+N+'.png')
     # plt.show()
 ###########
 
