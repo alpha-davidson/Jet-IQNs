@@ -1,4 +1,4 @@
-# Pytorch Implementation
+# PyTorch Implementation
 
 ### Data Preprocessing
 
