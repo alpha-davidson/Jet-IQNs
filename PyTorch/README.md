@@ -35,7 +35,7 @@ The optional parameters are.
   * `--T `:               the target that you want. Options: [RecoDatapT,
                         RecoDataeta, RecoDataphi, RecoDatam]
 
-  *` --N`:                  size of the dataset you want to use. Options are 10M
+  * ` --N`:                  size of the dataset you want to use. Options are 10M
                         and 100K, the default is 10M
   * `--n_iterations`
                         The number of iterations for training, the default is
