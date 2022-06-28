@@ -38,7 +38,7 @@ The optional parameters are.
   * `--n_hidden`:   The number of hidden layers in your NN, the default is
                         5
   * `--starting_learning_rate`:
-                        Starting learning rate, the defulat is 10^-3
+                        Starting learning rate, the default is 10^-3
   * `--show_loss_plots`:
                         Boolean to show the loss plots, defialt is False.
 
