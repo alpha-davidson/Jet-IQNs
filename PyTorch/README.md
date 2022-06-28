@@ -26,7 +26,7 @@ Where `RecoDatapT` is the the $p_T$ of the reconstructed jet, as the target you 
 
 
 
-Running `RunTrainingGenToReco.py` generates a dataframe of the predicted target in `predicted_data/` for later analysis. It is also possible to save the trained model parameters, the loss curves and/or show these plots by varying the optional parameters. To see all the available parameters that you can specify, do
+Running `RunTrainingGenToReco.py` generates a dataframe of the predicted target in `predicted_data/` for later analysis. It is also possible to save the trained model parameters (in `src/trained_models/`), the loss curves (in `src/images/loss_curves`) and/or show these plots by varying the optional parameters. To see all the available parameters that you can specify, do
 
 `python RunTrainingGenToReco.py --help`
 
@@ -59,7 +59,7 @@ For eaxample, you can train a fully-customized IQN by doing
 
 
 
-If you want to train all 4 independent IQNs with the default parameters, do 
+If you want to train all 4 independent IQNs with the default parameters, go to the `src/` directory and do 
 
 `bash train_all.sh`
 
