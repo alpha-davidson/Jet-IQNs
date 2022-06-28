@@ -6,13 +6,8 @@ Before anything else, make sure you have generated the data. We assume that you 
 
 `python PreprocessData.py`
 
-in the `PyTorch/` directory. This command produces [`data_100k.csv, train_data_10M.csv, test_data_10M.csv, validation_data_10M.csv`] in the `Pytorch/data` directory.
-
-
-`python PreprocessData.py`
-
-This command runs preprocessing on the files in `data/` and produces dataframes with tau and column names from them for later use (you will get *.csv files in the `data/` directory, these files are not included in the repository since they are too large!)
-
+in the `PyTorch/` directory. This command runs preprocessing on the `*.npy` files in `data/` and produces dataframes with tau and column names from them for later use (you will get *.csv files in the `data/` directory, these files are not included in the repository since they are too large!)
+Specifically, it produces [`data_100k.csv, train_data_10M.csv, test_data_10M.csv, validation_data_10M.csv`] in the `Pytorch/data` directory.
 
 ------
 
