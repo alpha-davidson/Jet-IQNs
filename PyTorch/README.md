@@ -1,18 +1,13 @@
-# Pytorch Implementation
+# PyTorch Implementation
 
 ### Data Preprocessing
 
-Before everything, make sure you have generated the data. We assume that you have produced the files [`smallData.npy, testFull_10M.npy, trainFull_10M.npy, validationFull_10M.npy`] with the data generation process in the Tensorflow directory. Then copy these data in the `PyTorch/data` directory, and do
+Before anything else, make sure you have generated the data. We assume that you have produced the files [`smallData.npy, testFull_10M.npy, trainFull_10M.npy, validationFull_10M.npy`] with the data generation process in the Tensorflow directory. Then copy these data in the `PyTorch/data` directory, and do
 
 `python PreprocessData.py`
 
-in the `PyTorch/` directory. This command produces [`data_100k.csv, train_data_10M.csv, test_data_10M.csv, validation_data_10M.csv`] in the Pytorch/data directory.
-
-
-`python PreprocessData.py`
-
-This command runs preprocessing on the files in `data/` and produces dataframes with tau and column names from them for later use (you will get *.csv files in the `data/` directory, these files are not included in the repository since they are too large!)
-
+in the `PyTorch/` directory. This command runs preprocessing on the `*.npy` files in `data/` and produces dataframes with tau and column names from them for later use (you will get *.csv files in the `data/` directory, these files are not included in the repository since they are too large!)
+Specifically, it produces [`data_100k.csv, train_data_10M.csv, test_data_10M.csv, validation_data_10M.csv`] in the `PyTorch/data` directory.
 
 ------
 
@@ -35,7 +30,7 @@ The optional parameters are.
   * `--T `:               the target that you want. Options: [RecoDatapT,
                         RecoDataeta, RecoDataphi, RecoDatam]
 
-  *` --N`:                  size of the dataset you want to use. Options are 10M
+  * ` --N`:                  size of the dataset you want to use. Options are 10M
                         and 100K, the default is 10M
   * `--n_iterations`
                         The number of iterations for training, the default is
@@ -43,7 +38,7 @@ The optional parameters are.
   * `--n_hidden`:   The number of hidden layers in your NN, the default is
                         5
   * `--starting_learning_rate`:
-                        Starting learning rate, the defulat is 10^-3
+                        Starting learning rate, the default is 10^-3
   * `--show_loss_plots`:
                         Boolean to show the loss plots, defialt is False.
 
