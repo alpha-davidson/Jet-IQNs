@@ -2,11 +2,11 @@
 
 ### Data Preprocessing
 
-Before everything, make sure you have generated the data. We assume that you have produced the files [`smallData.npy, testFull_10M.npy, trainFull_10M.npy, validationFull_10M.npy`] with the data generation process in the Tensorflow directory. Then copy these data in the `PyTorch/data` directory, and do
+Before anything else, make sure you have generated the data. We assume that you have produced the files [`smallData.npy, testFull_10M.npy, trainFull_10M.npy, validationFull_10M.npy`] with the data generation process in the Tensorflow directory. Then copy these data in the `PyTorch/data` directory, and do
 
 `python PreprocessData.py`
 
-in the `PyTorch/` directory. This command produces [`data_100k.csv, train_data_10M.csv, test_data_10M.csv, validation_data_10M.csv`] in the Pytorch/data directory.
+in the `PyTorch/` directory. This command produces [`data_100k.csv, train_data_10M.csv, test_data_10M.csv, validation_data_10M.csv`] in the `Pytorch/data` directory.
 
 
 `python PreprocessData.py`
