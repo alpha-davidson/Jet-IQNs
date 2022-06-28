@@ -1,3 +1,6 @@
+/**
+ * Adapted from https://github.com/alpha-davidson/falcon-cWGAN
+ **/ 
 #include <cmath>
 #include <numeric>
 #include <vector>
