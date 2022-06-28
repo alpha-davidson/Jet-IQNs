@@ -16,3 +16,5 @@ This code is designed to spawn 8 parallel proccesses in the background which wil
 python extractData.py
 ```
 This script needs to be in the folder with the generated text files.
+
+The C++ files for this are adpated from https://github.com/alpha-davidson/falcon-cWGAN.
