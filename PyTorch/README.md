@@ -67,5 +67,5 @@ To plot the results that you attained from training your IQN(s), do
 
 `python plot_results.py --T RecoDatapT`
 
-Where `RecoDatapT` is the the $p_T$ of the reconstructed jet, as the target you want to predict. This is the only **required parameter** to train the IQN, and the available options for it are [`'RecoDatapT', 'RecoDataeta', 'RecoDataphi', 'RecoDatam'`]. This plots histograms to compare the output of your models to the reco-jet distributions, and save those plots in the `images/` directory.
+Where `RecoDatapT` is the the $p_T$ of the reconstructed jet, as the target you want to predict. This is the only **required parameter** to train the IQN, and the available options for it are [`'RecoDatapT', 'RecoDataeta', 'RecoDataphi', 'RecoDatam'`]. This plots histograms to compare the output of your models to the reco-jet distributions, and save those plots in the `src/images/` directory.
 
