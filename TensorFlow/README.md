@@ -36,6 +36,7 @@ There are many command line arguments from click for this training script. They 
 - trainDataName: Name of train data file, default is trainData.npy
 - valDataName: Name of validation data file, default is valData.npy
 - networkName: Name of network, default is genToReco
+- target: Selects the network target 0:Pt, 1:Eta, 2:Phi, 3:Mass, 4:All, default is 4.
 
 
 ## Test
