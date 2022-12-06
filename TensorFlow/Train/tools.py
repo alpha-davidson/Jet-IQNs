@@ -24,8 +24,8 @@ def extract(trainFile, validationFile, singleTarget=-1):
 
     # Load data
     data = np.load(trainFile).T
-    genData = data[0:4,:10000]
-    recoData = data[4:8,:10000]
+    genData = data[0:4,:]
+    recoData = data[4:8,:]
 
     # Log scale pt, mass
     # 0: pt, 1: eta, 2: phi, 3: mass
@@ -36,6 +36,7 @@ def extract(trainFile, validationFile, singleTarget=-1):
 
     inputData = genData # Input data is log scaled gen data
     # Output is a ratio of the reco to the gen
+    
     outputData=(recoData+10)/(inputData[:4,:]+10)
 
     # Transpose to get proper shape
@@ -44,8 +45,8 @@ def extract(trainFile, validationFile, singleTarget=-1):
 
     # Repeat for the validation data
     data = np.load(validationFile).T
-    genData = data[0:4,:10000]
-    recoData = data[4:8,:10000]
+    genData = data[0:4,:]
+    recoData = data[4:8,:]
     genData[0,:] = np.log(genData[0,:])
     genData[3,:] = np.log(genData[3,:]+2)
     recoData[0,:] = np.log(recoData[0,:])
@@ -79,10 +80,10 @@ def extract(trainFile, validationFile, singleTarget=-1):
         trainIn = np.concatenate([trainIn, trainOut[:,0:singleTarget]], axis=1)
         trainOut = trainOut[:,singleTarget:singleTarget+1]
         
-        valIn = np.concatenate([valIn, valIn[:,0:singleTarget]], axis=1)
+        valIn = np.concatenate([valIn, valOut[:,0:singleTarget]], axis=1)
         valOut = valOut[:,singleTarget:singleTarget+1]
         
         normInfoIn = normInfoIn + normInfoOut[:singleTarget]
         normInfoOut = normInfoOut[singleTarget:singleTarget+1]
-        
+      
     return(trainIn, trainOut, valIn, valOut, normInfoIn, normInfoOut)
