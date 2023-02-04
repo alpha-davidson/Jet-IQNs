@@ -11,10 +11,10 @@ chmod +x generateEventsSub.sh
 chmod +x generateAllEvents.sh
 ./generateAllEvents
 ```
-This code is designed to spawn 8 parallel proccesses in the background which will generate the events in batches. On an 8 core AMD 4700U laptop this took a little under 8 hours to run while nothing else was running. In the end, there will be 1000 files containing 9.4 million sets of jets. The root files are not kept to preserve space. To compact these into one file run
+This code is designed to spawn 8 parallel proccesses in the background which will generate the events in batches. On an 8 core AMD 4700U laptop this took a little under 8 hours to run while nothing else was running. In the end, there will be 1000 files containing 16.4 million sets of jets. The root files are not kept to preserve space. To compact these into one file run
 ```
 python extractData.py
 ```
-This script needs to be in the folder with the generated text files.
+This script needs to be in the folder with the generated text files. It also trims the dataset to be of the target size.
 
 The C++ files for this are adpated from https://github.com/alpha-davidson/falcon-cWGAN.
