@@ -14,7 +14,7 @@ Sklearn: 0.24.2
 Tables: 3.7.0
 TensorFlow: 2.4.0
 
-
+Note that the IQN implementation as used in this repo does not work with current versions of TensorFlow as it does not save properly. A modified version of the code is included in the IQN folder (quantileNetRevised.py) which does properly save the network. It has a few internal adjustments in how the data is stored, but is functionally equivalent to the other version of the code.
 
 
 ## Train
